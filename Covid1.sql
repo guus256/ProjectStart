@@ -42,9 +42,10 @@ ORDER BY 1, 2
 
 
 --Vaccination table now
---Looking for the total cases vs total vaccinations WITH CTE
+--Discovering the total cases vs total vaccinations globally  
+--WITH CTE
 
-WITH PopvsVac (Continent, Location, Date, Population, CummulativePeopleVccinated, new_vaccinations)
+WITH PopvsVac (Continent, Location, `Date`, Population, CummulativePeopleVccinated, new_vaccinations)
 AS
 (
 SELECT dea.continent, dea.location, dea.date, dea.population, vac.new_vaccinations,
